@@ -1,0 +1,203 @@
+---
+title: Creative Coding Leiden
+description: CCL is a platform for digital creativity
+layout: page.html
+# noindex: true
+# canonical: https://example.com/page.html
+# stylesheet: stylesheet: pages/example.css
+ingredients:
+  - title: Go places
+    description: Visit venues like <a href="https://nxtmuseum.com/nl/">Nxt Museum</a>, <a href="https://www.fabrique-lumieres.com/nl">Fabrique des Lumières</a>, or <a href="https://mocomuseum.com/nl/tentoonstellingen/amsterdam/studio-irma/846">Moco</a> to experience generative art.
+  - title: Next meet-up
+    description: Coming soon to a theater near you! Place and time to be announced.
+  - title: Check these out
+    description: Experience the work of Dutch digital artists like <a href="https://noortjestortelder.com/">Noortje Stortelder</a>, <a href="https://veravandeseyp.com/about/">Vera van de Seyp</a>, <a href="https://piterpasma.nl/">Piter Pasma</a>, or <a href="https://crismollee.com/">Cris Mollee</a>.
+  - title: Deep time
+    description: Look back at the long history of procedural art in the <a href="https://timeline.lerandom.art/">Generative Art Timeline</a>.
+  - title: Feeling adventurous?
+    description: Dive straight into the thick of it with 3D tools like <a href="https://www.blender.org/">Blender</a> or <a href="https://derivative.ca/">TouchDesigner</a> for multi-media.
+  - title: Algoraves
+    description: Visit coding events where music and visuals are coded live, for example at <a href="https://livecodingsessions.nl/">Live Coding Sessions Amsterdam</a>.
+---
+
+<section class="grid color --invert --set-sheet space --bottom-m">
+
+  <p class="grid__item --start-1 --span-12 flex --no-wrap --justify-between --align-items-center text --size-m --weight-200 --width-s --leading-s --spacing-xl --uppercase space --bottom-flush --top-pad-m --bottom-pad-m">
+    <span>Code </span>
+    <span>Engage </span>
+    {% render 'svg/ccl.svg' %}
+    <span>Grow </span>
+    <span>Interact </span>
+  </p>
+
+  <h1 class="grid__item --start-1 --span-12 hero text --size-xl --weight-800 --width-l --leading-s --spacing-s --uppercase space --top-flush --bottom-l border --top-thin --bottom-thin">Creative Coding Leiden</h1>
+
+  <small-details>
+    <details class="footer__menu grid__item --start-1 --span-4" open>
+      <summary class="text --size-xl --weight-600 --width-s --uppercase space --bottom-m">Menu</summary>
+      <ul class="text --undecorated --unlisted">
+        <li><a class="button text --size-xl --align-center display --block" href="mailto:ernestsuyver@gmail.com?&subject=CCL">Contact us</a></li>
+        <li class="space --top-s"><a class="button text --size-xl --align-center display --block" href="/">Home</a></li>
+      </ul>
+    </details>
+  </small-details>
+
+  <div class="grid__item --start-auto --span-8 border --left-thin@m space --left-pad-l@m">
+    <p class="text --size-m --weight-300 space --bottom-flush">Creative Coding Leiden (CCL) is a platform for digital creativity. CCL supports creators, connects organizations and transcends sectors, inspires audiences and shares knowledge with hobbyists and ICT professionals.</p>
+  </div>
+
+  <h2 class="grid__item --start-1 --span-12 text --size-xl --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-l --bottom-m border --top-thin --bottom-thin">100% creativity! Fun guaranteed!</h2>
+
+</section>
+
+{% for item in ingredients %}
+  {% capture gridClass %}
+    {% cycle "gridClassCycle": "--start-1", "--start-auto", "--start-auto" %}
+  {% endcapture %}
+  <div class="grid__item {{ gridClass }} --span-4">
+    <h3 class="space --top-s">{{ item.title }}</h3>
+    <div class="text --size-s">{{ item.description | markdownify }}</div>
+  </div>
+{% endfor %}
+
+<p class="grid__item --start-1 --span-12 text --size-m --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-m --bottom-l border --top-thin --bottom-thin color --invert --set-sheet">Join <strong>Creative Coding Leiden</strong> - where code sparks art and imagination takes flight.</p>
+
+<section id="s1" class="grid__item --start-1 --span-6 --align-stretch">
+
+  <h2 class="space --top-flush">Endless possibilities</h2>
+  <p>Creative coding is a dynamic fusion of technology and artistic expression. At its core, it involves programming and computational tools to generate interactive and visually engaging experiences. With creative coding, one can explore a multitude of avenues, from crafting interactive art installations and generative music compositions to developing immersive virtual reality experiences. It's not limited to a single discipline; it bridges the realms of art, design, technology, and beyond, giving individuals the power to invent new forms of creative expression. Its applications are boundless, extending to data visualization, interactive storytelling, game design, and more. By blending the precision of coding with the spontaneity of artistry, creative coding empowers creators to push boundaries and bring innovative, captivating visions to life.</p>
+  
+<h3>Casey Reas</h3>
+<p>Casey Reas is an American artist who uses code to create conceptual, procedural and minimal artworks. His works can viewed in galleries and museums around the world. In 2001, together with Ben Fry, he create the programming language <a href="https://processing.org/">Processing</a>. The software library we are using on these pages, p5.js, is developed from Processing, especially for the Web. Here is a video where Casey Reas talks about his work and methods.</p>
+<p class="grid__item --start-1 --span-12 text --size-m --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-m --bottom-l border --top-thin --bottom-thin color --invert --set-sheet">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_8DMEHxOLQE?si=LRk_bdkpN1aY2Rn9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+
+<h3>Daniel Shiffman</h3>
+<p>Daniel Shiffman is a computer programmer, a director of the Processing Foundation, and, like Casey Reas, an Arts professor. He runs a popular YouTube channel, <a href="https://www.youtube.com/@TheCodingTrain/featured">The Coding Train</a>, with instructional videos on how to program in Processing and p5.js. Here is a video showing off his educational skills.</p>
+<p class="grid__item --start-1 --span-12 text --size-m --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-m --bottom-l border --top-thin --bottom-thin color --invert --set-sheet"><iframe width="560" height="315" src="https://www.youtube.com/embed/yPWkPOfnGsw?si=c_zIf7pAaoctJ4DT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+
+</section>
+
+<section id="s2"  class="grid__item --start-auto --span-6 --align-stretch space --left-pad-l@m border --left-thin@m">
+
+<h2 class="space --top-flush@m">Get started</h2>
+<p>This is a <strong>very</strong> short walk-through. It shows how to set up a p5.js project and make your first sketch in the <a href="https://editor.p5js.org" target="_blank">p5.js editor</a>.</p>
+
+<h3>Your First Sketch</h3>
+<p>When you make a sketch in p5,js, you first create a canvas. This is the area in which you will draw. When you open the <a href='https://editor.p5js.org/'>p5.js web editor</a> the set up and draw functions are there. Also, a white background is drawn.</p>
+  
+<code class="language-javascript">
+function setup() {
+createCanvas(400, 400);
+}
+
+function draw() {
+background(220);
+}
+</code>
+
+<p>You can now start drawing, for example a circle. Add the following line to the draw function, on a new line between the last semicolon and the closing curly bracket:</p>
+
+<code class="language-javascript">ellipse(50,50,80,80);</code>
+
+<p>Run the code by pressing the Play button. You should now see an ellipse. Its center is 50 50 pixels over from the left and 50 pixels down from the top. It has a width of 80 pixels and a height of the same size, making it a circle.</p>
+
+    <img src="https://p5js.org/assets/img/get-started/first-sketch.png" alt='canvas has a circle of width and height 50 at position 80 x and 80 y'/>
+
+    <p>Let's now make a sketch that's a little more exciting. Remove the line you just added and put this instead:</p>
+
+<code class="language-javascript">
+if (mouseIsPressed) {
+fill(0);
+} else {
+fill(255);
+}
+ellipse(mouseX, mouseY, 80, 80);
+</code>
+
+<p>Now, remove the <code>background(220);</code>. Run the code. You should now see white circles at the position of the mouse. When a mouse button is pressed, the circle color changes to black.</p>
+
+<img src="https://p5js.org/assets/img/get-started/first-sketch2.png" alt='canvas has multiple circles drawn on it following the path of the mouse'/>
+  
+</section>
+
+<p class="grid__item --start-1 --span-12 text --size-m --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-m --bottom-l border --top-thin --bottom-thin color --invert --set-sheet">Now stop watching videos and try it out yourself</p>
+
+<h2 class="grid__item --start-1 --span-12 text --size-xl --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-l --bottom-m border">Run your code and see the results!</h2>
+<h3 class="grid__item --start-1 --span-12 text --size-l --weight-400 --align-center">Double click on <strong>p5.ipynb</strong> (menu, left) to start the notebook</h3>
+<h3 class="grid__item --start-1 --span-12 text --size-l --weight-400 --align-center">Press <strong>Shift-Enter</strong> in a cell with code to run it.</h3>
+<h3 class="grid__item --start-1 --span-12 text --size-l --weight-400 --align-center">Explanation <a href="#s3">further down this page</a>.</h3>
+
+<p class="grid__item --start-1 --span-12 text --size-m --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-m --bottom-l border --top-thin --bottom-thin color --invert --set-sheet">
+<iframe
+  src="https://ernestsuyver.github.io/jupyterlitedemo1/"
+  title="P5 notebook in JupyterLite"
+  width="800"
+  height="800"
+></iframe>
+</p>
+
+<section id="s3" class="grid__item --start-1 --span-6 --align-stretch">
+
+<h2 class="space --top-flush">How to Notebook</h2>
+
+<h3>What is this thing?</h3>
+<p>This is a notebook. A notebook is a document where text is combined with code. You can run the code and see the results.</p>
+<p>Click on the Play button in the menu at the top of the document to run the code. Alternatively, if a cell contains code, you can press shift-enter in the cell.</p>
+
+<h3>Why use notebooks?</h3>
+<p>We wanted you  to view the code and run it and see the results - and then to tweak the code and rerun it. We believe this is the most fun way to learn.🎈</p>
+<p>We also wanted you to do the coding right here, on this site. We did not want you to have install software. So we looked for something that had all the required software in it. Notebooks can contain all you need -  allowing you to start coding right away. In this case, the notebook is running on <a href="https://ernestsuyver.github.io/jupyterlitedemo1/">another site</a> and connected to this one via an iframe.</p>
+
+<h3>How many notebooks are there?</h3>
+<p>There is currently only one. It has some elementary examples using p5.js. In the future, we may add more, possibly also in other programming languages such as the Python libraries DrawBot or Turtle. Come help us write one! Or write one yourself and share your work!</p>
+
+<h3>P5 notebook</h3>
+<p>Technically speaking, it is a Jupyter Notebook environment for p5.js kernels running in the browser, powered by JupyterLite. <a href="https://github.com/jtpio/p5-notebook">Here</a> is the source file. <a href="https://p5nb.vercel.app/retro/tree/index.html">Here</a> is a sandbox.</p>
+
+<h3>One more video</h3>
+<p>This video shows some simple things you can do with p5.js. Try this in a notebook!</p>
+<p class="grid__item --start-1 --span-12 text --size-m --weight-800 --width-l --leading-s --spacing-s --uppercase --align-center space --top-m --bottom-l border --top-thin --bottom-thin color --invert --set-sheet">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UsIF5r8rAvk?si=KDK58FkZtCIjJRFz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+
+</section>
+
+<section id="s4"  class="grid__item --start-auto --span-6 --align-stretch space --left-pad-l@m border --left-thin@m">
+
+<h2 class="space --top-flush@m">Some technical details</h2>
+
+<h3>Jupyter Notebooks</h3>
+<p>The notebook on this page is a Jupyter Notebook. This is a web-based interactive computing platform that combines texts with live code and visualizations. Jupyter Notebooks support Python as well as other programming languages such as JavaScript. This means we can use them for a wide variety of examples of creative coding.</p>
+
+<h4>Can I run Jupyter notebooks myself?</h4>
+<p>There are many ways to run Jupyter notebooks. Some of them require you to install software to run the notebook itself, and then other software to run the code in the notebook. Download the notebook <a href="https://github.com/ErnestSuyver/jupyterlitedemo1/blob/main/content/p5.ipynb">here</a> if you want to go down that road. Another way is to use Binder.</p>
+
+<h4>What is Binder?</h4>
+<p><a href="https://mybinder.org/">Binder</a> is a service for running a notebook in its own dedicated online environment. It allows you to view and share Jupyter Notebooks without requiring any local installations. Click <a href="https://mybinder.org/v2/gh/ErnestSuyver/jupyterlitedemo1/HEAD">here</a>  to interact with this notebook on Binder.</p>
+<!-- <p>Or click on this button: <a href="https://mybinder.org/v2/gh/ErnestSuyver/jupyterlitedemo1/HEAD"><a href="https://mybinder.org/badge_logo.svg">Binder</a></a>--> </p>
+
+<h3>Languages and libraries</h3>
+
+<h4>What are libraries?</h4>
+<p>Libraries are collections of functions to make the computer do specific things, in our case create interesting or stunning visuals. If you use a library, someone else did the heavy lifting of creating a function for you. There are many, many libraries from many, many programming languages that can be used for visualization or other artistic purposes. We list only a few here.</p>
+
+<h4>JavaScript</h4> 
+<p>JavaScript is a programming language. It is often used to make websites interactive. Examples of JavaScript libraries that can be used for creative coding are <a href="https://p5js.org/">p5.js</a> that we are using above, <a href="http://paperjs.org/">Paper.js</a> and <a href="https://d3js.org/">D3.js</a> (which comes with its own notebooks, <a href="https://observablehq.com/">Observable</a>.</p>
+
+<h4>Python</h4> 
+<p>Python is another programming language. It is used in a wide variety of ways, for example data science and machine learning. Examples of Python libraries that can be used for creative coding are <a href="http://py5coding.org/index.html">Py5</a>, which is, like p5.js based on Processing (itself a dialect of the programming language Java) as well as <a href="https://docs.python.org/3/library/turtle.html">Turtle</a> and <a href="https://www.pygame.org/news">Pygame</a>.</p>
+
+<!-- <h4>What is GitHub?</h4>
+<p>GitHub is a place to share code. It is named after <strong>git</strong>, a version management system for code. The code for this website, including text, images, and notebooks, is on GitHub.</p> -->
+
+</section>
+
+<footer class="grid__item --start-1 --span-12 border --top-thin space --top-l --top-pad-m text --size-s">
+  <p>By <a href="https://dre05119071.xyz/">DRE</a> using the <a href="https://github.com/adamstddrd/grease">Grease</a> template for <a href="https://www.11ty.dev/">11ty</a>. Source code <a href="https://github.com/ErnestSuyver/CCL-v2">here</a>. Have fun.</p>
+</footer>
+
+{% style %}
+.hero {
+  font-size: min(11.375vw, 10.875em);
+}
+{% endstyle %}
